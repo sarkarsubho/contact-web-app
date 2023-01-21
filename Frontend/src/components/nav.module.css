@@ -1,0 +1,25 @@
+.main{
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.menu{
+    display: flex;
+    gap: 10px;
+}
+.button{
+    background-color: #3182CE;
+    padding: 13px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button:active{
+    background-color: #236099;
+}
