@@ -1,29 +1,116 @@
-.main{
-    height: 9vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
- box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+.main {
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.menu{
-    display: flex;
-    gap: 10px;
+.menuList {
+  display: flex;
+  gap: 10px;
 }
-.button{
-    background-color: #3182CE;
-    padding: 13px;
-    border-radius: 5px;
-    border: none;
+
+.menu {
+  display: flex;
+  gap: 10px;
+}
+.smallMenu {
+  display: none;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+   padding: 10px;
+}
+.button {
+    width: 100%;
+  background-color: #2f76b9;
+  padding: 13px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button:active {
+  background-color: #236099;
+}
+.logo {
+  margin: 0px;
+}
+.logo a {
+  text-decoration: none;
+  color: #236099;
+}
+.menuIcon {
+  display: none;
+}
+.backbtn{
     color: white;
+    background-color: #061b2e;
+    font-size: xx-large;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    padding-top: -10px;
     font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
+    position: absolute;
+    right:-9px;
+    top: 40px;
 }
-.button:active{
+.backbtn >p{
+    margin-top: -5px;
+}
+
+@media only screen and (max-width: 480px) {
+  .main {
+    padding: 5px 10px;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .heading{
     background-color: #236099;
+    padding: 10px 0;
+    height: 40px;
+  }
+  .heading >h2{
+    margin: 0; 
+    color: aliceblue;
+  }
+  .heading >h2 >a{
+   text-decoration: none;
+    color: aliceblue;
+  }
+
+  .backdropContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+
 }
-.logo a{
-    text-decoration: none;
-    color: #236099;
+  
+  .smallMenu {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: #3793e9;
+    gap: 40px;
+   position: relative;
+    backdrop-filter: blur(4px);
+  }
 }

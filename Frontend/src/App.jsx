@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { ContactList } from "./pages/ContactList";
 import { MessageList } from "./pages/MessageList";
 import { ContactInfo } from "./pages/ContactInfo";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
 
       {/* All Routes */}
       <Routes>
-        <Route path="/" element={<h1> Welcome to Contact App</h1>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
         <Route path="/contactlist" element={<ContactList></ContactList>}></Route>
         <Route path="/messagelist" element={<MessageList></MessageList>}></Route>
 

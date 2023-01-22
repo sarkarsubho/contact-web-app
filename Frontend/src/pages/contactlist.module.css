@@ -1,17 +1,20 @@
 .main{
-    /* display: flex;
-    place-items: center;
-    box-sizing: border-box;
-    justify-content: center; */
+    display: flex;
+   
+    justify-content: center; 
     padding-top: 50px;
     width: max-content;
     margin: auto;
+    width: 100vw;
     height: 91vh;
+    background-color: antiquewhite;
 }
 .table{
-   background-color: aliceblue;
-   padding: 20px;
-   border-radius: 10px;
+   background-color: rgb(95, 157, 211);
+   padding: 10px;
+   border-radius: 10px; 
+   width: fit-content;
+   height: fit-content;
 }
 .thead{
     background-color: yellow;

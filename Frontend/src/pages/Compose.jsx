@@ -29,9 +29,17 @@ export const Compose = ({ data, setComposeView, composeView }) => {
       otp: otpStr[otpStr.length - 2],
       message,
     };
-    axios.post("http://localhost:8080/message", payload).then((res) => {
-      setComposeView(!composeView);
-    });
+    axios
+      .post("http://localhost:8080/message", payload)
+      .then((res) => {
+        alert("Message Sent.");
+        setComposeView(!composeView);
+      })
+      .catch((er) => {
+        console.log("error", er.response);
+        alert(er.response.data);
+        setComposeView(!composeView);
+      });
   };
 
   return (
