@@ -1,7 +1,9 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import { Navbar } from './components/Navbar';
-import { ContactList } from './pages/ContactList';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Navbar } from "./components/Navbar";
+import { ContactList } from "./pages/ContactList";
+import { MessageList } from "./pages/MessageList";
+import { ContactInfo } from "./pages/ContactInfo";
 
 function App() {
   return (
@@ -10,10 +12,12 @@ function App() {
 
       {/* All Routes */}
       <Routes>
-        <Route path="/" element={<ContactList></ContactList>}></Route>
+        <Route path="/" element={<h1> Welcome to Contact App</h1>}></Route>
+        <Route path="/contactlist" element={<ContactList></ContactList>}></Route>
+        <Route path="/messagelist" element={<MessageList></MessageList>}></Route>
 
+        <Route path="/details/:id" element={<ContactInfo></ContactInfo>}></Route>
       </Routes>
-      
     </div>
   );
 }

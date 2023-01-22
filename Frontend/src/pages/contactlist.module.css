@@ -1,9 +1,30 @@
 .main{
-    display: grid;
-    /* place-items: center; */
+    /* display: flex;
+    place-items: center;
     box-sizing: border-box;
-    justify-content: center;
+    justify-content: center; */
     padding-top: 50px;
-    width: 100%;
+    width: max-content;
+    margin: auto;
     height: 91vh;
+}
+.table{
+   background-color: aliceblue;
+   padding: 20px;
+   border-radius: 10px;
+}
+.thead{
+    background-color: yellow;
+    
+}
+.thead tr th{
+    background-color: rgb(212, 199, 10);
+    padding: 5px 20px;
+}
+
+.tbody tr td {
+ background-color: antiquewhite;
+ /* margin-top: 5px; */
+ padding: 6px; 
+ cursor: pointer;
 }

@@ -1,0 +1,63 @@
+.main{
+ position: fixed;
+ width: 100vw;
+ height: 100vh;
+ top: 0;
+ left: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ backdrop-filter: blur(5px);
+}
+.inputBox{
+    background-color: rgb(214, 214, 214);
+    opacity: 1;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.cancelbtn{
+    width: 100%;
+    text-align: right;
+    position: relative;
+}
+.cancelbtn >button{
+    position: absolute;
+    right: 0px;
+    color: red;
+    font-weight: 600;
+    border: none;
+    background: local;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.button{
+    background-color: #3182CE;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.button:active{
+    background-color: #276bac;
+}
+.input{
+    border-radius: 6px;
+    border:3px solid #3182CE;
+    padding: 10px;
+    width: 90%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a6cb9;
+    text-align: center;
+}

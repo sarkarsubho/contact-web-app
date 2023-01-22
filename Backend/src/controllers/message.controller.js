@@ -14,27 +14,15 @@ router.get("/", async (req, res) => {
 
 router.post("/",sendOTP, async(req, res) => {
   try {
+    // console.log(req.body)
     console.log("message Created");
-    //   const data = await Message.find({}).lean().exec();
-    return res.status(200).send("data");
+    // const message=Message.create(req.body);
+    return res.status(200).send("message");
   } catch (er) {
     return res.status(500).send({ error: er });
   }
 });
 
-router.post("/veryfyClint",createClint, async(req, res) => {
-    try {
-
-
-
-
-      console.log("ok Created");
-      //   const data = await Message.find({}).lean().exec();
-      return res.status(200).send("data");
-    } catch (er) {
-      return res.status(500).send({ error: er });
-    }
-  });
 
 
 
