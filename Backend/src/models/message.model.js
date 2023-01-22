@@ -5,7 +5,7 @@ const messageSchema=new mongoose.Schema({
     firstName:{type:String,required:true},
     lastName:{type:String,required:true},
     phone:{type:String,required:true},
-    time:{type:String,required:true},
+    time:{type:Number,required:true},
     otp:{type:String,required:true},
 },
 { versionKey: false, timestamps: true }

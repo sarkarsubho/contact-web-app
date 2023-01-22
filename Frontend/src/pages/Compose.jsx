@@ -14,7 +14,9 @@ export const Compose = ({ data, setComposeView, composeView }) => {
     }
     return OTP;
   };
-  const [message, setmessage] = useState(`Hi. Your OTP is: ${generateOTP(6)} .`);
+  const [message, setmessage] = useState(
+    `Hi. Your OTP is: ${generateOTP(6)} .`
+  );
 
   const handleSubmit = () => {
     let otpStr = message.trim().split(" ");
@@ -23,7 +25,7 @@ export const Compose = ({ data, setComposeView, composeView }) => {
       firstName: data.firstName,
       lastName: data.lastName,
       phone: data.phone,
-      time: new Date().toLocaleString(),
+      time: Date.now(),
       otp: otpStr[otpStr.length - 2],
       message,
     };
@@ -36,7 +38,7 @@ export const Compose = ({ data, setComposeView, composeView }) => {
     <div className={styles.main}>
       <div className={styles.inputBox}>
         <div className={styles.cancelbtn}>
-          <button onClick={()=> setComposeView(!composeView)}>X</button>
+          <button onClick={() => setComposeView(!composeView)}>X</button>
         </div>
         <h3>Message</h3>
         <input type="text" className={styles.input} value={message} />

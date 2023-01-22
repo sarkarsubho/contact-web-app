@@ -16,8 +16,8 @@ router.post("/",sendOTP, async(req, res) => {
   try {
     // console.log(req.body)
     console.log("message Created");
-    // const message=Message.create(req.body);
-    return res.status(200).send("message");
+    const message=Message.create(req.body);
+    return res.status(200).send(message);
   } catch (er) {
     return res.status(500).send({ error: er });
   }

@@ -1,37 +1,46 @@
 import React from "react";
 import styles from "./contactlist.module.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 export const MessageList = () => {
-    return <div className={styles.main}>
+  const [messages, setMessages] = useState([]);
 
-    <table className={styles.table}>
-        <thead className={styles.thead} >
-            <tr>
-                <th>
-                    Sl.no.
-                </th>
-                <th>
-                   First Name
-                </th>
-                <th>
-                    Last Name
-                </th>
-            </tr>
+  useEffect(() => {
+    axios.get("http://localhost:8080/message").then((res) => {
+      console.log(res.data);
+      let data = res.data.sort((a, b) => b.time - a.time);
+      setMessages(data);
+    });
+  }, []);
+
+  return (
+    <div className={styles.main}>
+      <table className={styles.table}>
+        <thead className={styles.thead}>
+          <tr>
+            <th>Sl.no.</th>
+            <th> Name</th>
+            <th>Time</th>
+            <th>OTP</th>
+          </tr>
         </thead>
         <tbody className={styles.tbody}>
-        <tr>
+          {messages.map((element, index) => {
+            return (
+              <tr key={element._id}>
+                <td>{index + 1}</td>
                 <td>
-                    Sl.no.
+                  {element.firstName} {element.lastName}
                 </td>
-                <td>
-                   First Name
-                </td>
-                <td>
-                    Last Name
-                </td>
-            </tr>
-
+                <td>{new Date(element.time).toDateString()}</td>
+                <td>{element.otp}</td>
+              </tr>
+            );
+          })}
         </tbody>
-    </table>
-  </div>;
+      </table>
+    </div>
+  );
 };
