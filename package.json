@@ -2,7 +2,7 @@
   "name": "contact-web-app",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "Backend",
+  "main": "Backend/package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
 
