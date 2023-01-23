@@ -30,7 +30,7 @@ export const Compose = ({ data, setComposeView, composeView }) => {
       message,
     };
     axios
-      .post("http://localhost:8080/message", payload)
+      .post("https://weary-wasp-clothes.cyclic.app/message", payload)
       .then((res) => {
         alert("Message Sent.");
         setComposeView(!composeView);

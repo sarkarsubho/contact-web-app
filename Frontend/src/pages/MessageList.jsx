@@ -8,7 +8,7 @@ export const MessageList = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/message").then((res) => {
+    axios.get("https://weary-wasp-clothes.cyclic.app/message").then((res) => {
       console.log(res.data);
       let data = res.data.sort((a, b) => b.time - a.time);
       setMessages(data);

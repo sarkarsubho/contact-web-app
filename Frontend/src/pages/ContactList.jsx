@@ -7,7 +7,7 @@ export const ContactList = () => {
   let [contactList, setContactList] = useState([]);
 
   const getData = () => {
-    axios.get("http://localhost:8080/contacts").then((res) => {
+    axios.get("https://weary-wasp-clothes.cyclic.app/contacts").then((res) => {
       console.log("all Contacts", res.data);
       setContactList(res.data);
     });

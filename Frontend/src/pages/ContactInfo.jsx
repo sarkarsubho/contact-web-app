@@ -11,7 +11,7 @@ export const ContactInfo = () => {
   const [data, setData] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    axios.get(`http://localhost:8080/contacts/${id}`).then((res) => {
+    axios.get(`https://weary-wasp-clothes.cyclic.app/contacts/${id}`).then((res) => {
       console.log(res.data);
       setData(res.data);
     });
