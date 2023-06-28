@@ -7,7 +7,9 @@ app.use(cors())
 
 const contactController=require("./controllers/contact.controller");
 const messageController=require("./controllers/message.controller");
+const travelController = require("./controllers/travel.controllers");
 
+app.use("/tours", travelController);
 app.use("/contacts",contactController);
 app.use("/message",messageController);
 
